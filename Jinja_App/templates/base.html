@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %} Jinja Class{% endblock %}</title>
+</head>
+<body>
+<header>
+    <h1> Jinja class</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li><a href="{% url "about" %}">About</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
+            <li><a href="{% url "services" %}">Services</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+<footer>
+<p>&copy; 2024 Jinja class</p>
+</footer>
+</body>
+</html>
